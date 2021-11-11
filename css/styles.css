@@ -27,6 +27,8 @@ body {
 
 .inner {
     box-sizing: border-box;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 /** HEADER **/
@@ -122,8 +124,9 @@ footer {
 }
 
 footer > .inner {
-    height: 180px;
+    min-height: 180px;
     background: #cba16c;
+    display: flex;
 }
 
 .footer-menu {
@@ -135,6 +138,7 @@ footer > .inner {
     padding: 0;
     transform: translate(-50%, -50%);
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -155,14 +159,10 @@ footer > .inner {
     height: 18px;
     transform: translate(-50%, 0);
     background: #b1926a;
+    display: flex;
 }
 
 @media (max-width: 1440px) {
-    .wrapper > *,
-    header > *,
-    footer > * {
-        max-width: 1020px;
-    }
 
     header > .inner {
         overflow-x: hidden;
@@ -259,12 +259,6 @@ footer > .inner {
 }
 
 @media (max-width: 1024px) {
-    .wrapper > *,
-    header > *,
-    footer > * {
-        max-width: 760px;
-    }
-
     .some-card {
         flex: 0 1 49%;
     }
@@ -278,3 +272,109 @@ footer > .inner {
     }
 }
 
+@media (max-width: 721px) {
+    .footer-menu >*:not(:last-child) {
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 608px) {
+    .footer-menu {
+        top: 30%;
+    }
+}
+
+@media (max-width: 680px) {
+    .logo {
+        width: 100px;
+        height: 140px;
+    }
+
+    .phone {
+        width: 200px;
+        height: 20px;
+    }
+
+    .telegram {
+        width: 120px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 555px) {
+    .some-card {
+        flex: 0 1 100%;
+    }
+}
+
+@media (max-width: 544px) {
+    .phone {
+        transform: translate(0%, 0);
+        top: 90px;
+        left: auto;
+        right: 20px;
+    }
+
+    .telegram {
+        transform: translate(0%, 0);
+        top: 130px;
+        left: auto;
+        right: 20px;
+    }
+}
+
+@media (max-width: 414px) {
+    .logo {
+        width: 80px;
+        height: 100px;
+    }
+
+    .phone {
+        width: 160px;
+        height: 18px;
+    }
+
+    .telegram {
+        width: 100px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 352px) {
+    .logo {
+        left: 100px;
+    }
+
+    .phone {
+        top: 150px;
+        left: 70px;
+    }
+
+    .telegram {
+        top: 180px;
+        left: 100px;
+    }
+}
+
+@media (max-width: 327px) {
+    .copyright {
+        bottom: 3px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        left: 90px;
+    }
+
+    .phone {
+        top: 150px;
+        left: 60px;
+    }
+
+    .telegram {
+        top: 180px;
+        left: 90px;
+    }
+}
