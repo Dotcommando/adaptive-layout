@@ -27,8 +27,6 @@ body {
 
 .inner {
     box-sizing: border-box;
-    margin-right: 30px;
-    margin-left: 30px;
 }
 
 /** HEADER **/
@@ -124,9 +122,8 @@ footer {
 }
 
 footer > .inner {
-    min-height: 180px;
+    height: 180px;
     background: #cba16c;
-    display: flex;
 }
 
 .footer-menu {
@@ -138,7 +135,6 @@ footer > .inner {
     padding: 0;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -159,14 +155,22 @@ footer > .inner {
     height: 18px;
     transform: translate(-50%, 0);
     background: #b1926a;
-    display: flex;
 }
 
 @media (max-width: 1440px) {
+    .wrapper > *,
+    header > *,
+    footer > * {
+        max-width: 1020px;
+    }
 
     header > .inner {
         overflow-x: hidden;
         overflow-y: visible;
+    }
+
+    .nav {
+        position: fixed;
     }
 
     #hamburger ~ .nav {
@@ -259,6 +263,12 @@ footer > .inner {
 }
 
 @media (max-width: 1024px) {
+    .wrapper > *,
+    header > *,
+    footer > * {
+        max-width: 760px;
+    }
+
     .some-card {
         flex: 0 1 49%;
     }
@@ -272,109 +282,106 @@ footer > .inner {
     }
 }
 
-@media (max-width: 721px) {
-    .footer-menu >*:not(:last-child) {
-        margin-right: 10px;
-        margin-bottom: 5px;
+@media (max-width: 760px) {
+    .wrapper > *,
+    header > *,
+    footer > * {
+        max-width: 690px;
     }
-}
 
-@media (max-width: 608px) {
     .footer-menu {
-        top: 30%;
+        top: 30px;
+        left: 20px;
+        right: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-menu >*:not(:last-child) {
+        margin-right: 20px;
+        margin-bottom: 10px;
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 599px) {
+    .wrapper > *,
+    header > *,
+    footer > * {
+        max-width: 530px;
+    }
+
+    header > .inner {
+        height: 170px;
+    }
+
     .logo {
         width: 100px;
-        height: 140px;
+        height: 120px;
+    }
+
+    .some-card {
+        flex: 0 1 100%;
+        margin-bottom: 20px;
     }
 
     .phone {
         width: 200px;
-        height: 20px;
     }
-
     .telegram {
-        width: 120px;
-        height: 20px;
+        width: 160px;
     }
+
 }
 
-@media (max-width: 555px) {
-    .some-card {
-        flex: 0 1 100%;
-    }
-}
-
-@media (max-width: 544px) {
-    .phone {
-        transform: translate(0%, 0);
-        top: 90px;
-        left: auto;
-        right: 20px;
+@media (max-width: 477px) {
+    .footer-menu {
+        top: 40px;
+        flex-direction: column;
     }
 
-    .telegram {
-        transform: translate(0%, 0);
-        top: 130px;
-        left: auto;
-        right: 20px;
-    }
-}
-
-@media (max-width: 414px) {
-    .logo {
-        width: 80px;
-        height: 100px;
+    footer > .inner {
+        height: 300px;
     }
 
     .phone {
         width: 160px;
-        height: 18px;
+        height: 20px;
+        top: 90px;
+        transform: translate(0%, 0);
+        left: auto;
+        right: 20px;
     }
 
     .telegram {
-        width: 100px;
-        height: 18px;
-    }
-}
-
-@media (max-width: 352px) {
-    .logo {
-        left: 100px;
+        width: 110px;
+        height: 22px;
+        top: 130px;
+        transform: translate(0%, 0);
+        left: auto;
+        right: 20px;
     }
 
-    .phone {
-        top: 150px;
-        left: 70px;
-    }
-
-    .telegram {
-        top: 180px;
-        left: 100px;
-    }
-}
-
-@media (max-width: 327px) {
-    .copyright {
-        bottom: 3px;
-    }
 }
 
 @media (max-width: 320px) {
+    header > .inner {
+        height: 150px;
+    }
+
     .logo {
-        left: 90px;
+        width: 75px;
+        height: 90px;
     }
 
     .phone {
-        top: 150px;
-        left: 60px;
+        top: 75px;
+        width: 140px;
+        height: 15px;
     }
 
     .telegram {
-        top: 180px;
-        left: 90px;
+        top: 110px;
+        width: 90px;
+        height: 15px;
     }
 }
