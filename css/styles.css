@@ -330,7 +330,6 @@ footer > .inner {
     .telegram {
         width: 160px;
     }
-
 }
 
 @media (max-width: 477px) {
@@ -360,7 +359,6 @@ footer > .inner {
         left: auto;
         right: 20px;
     }
-
 }
 
 @media (max-width: 320px) {
